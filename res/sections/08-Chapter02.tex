@@ -1,0 +1,39 @@
+\chapter{Related Work}
+
+%TODO: porre l'accento sulla differenza che esiste tra Modello e Problema
+
+\section{Distribuited Algorithms}
+
+Distributed algorithms are particular algorithms that model specific problems concerning a system in which there are more entities (called in the literature \textit{processes} or \textit{nodes}) that must communicate with each other to solve, in general, a given problem.\\
+These algorithms model abstract problems: it is not usually specified, in a distributed algorithm, if the processes must reside on several distinct machines or not.
+
+Distributed algorithms are used in many application areas of distributed computing.
+
+The classic problems solved by distributed algorithms include consensus (which we will discuss in detail later), leader election, distributed search, spanning tree generation, mutual exclusion, and resource allocation.\\
+% TODO: citare con le fonti i problemi di leader election, spanning tree generation ecc...
+
+A distributed algorithm must usually consider several aspects related to the communication between the various processes (such as this communication and the risks associated with it in terms of potential loss or alteration of the information), but also of the \textit{topology} of the network and the \textit{committee} (it is generally called the set of processes that must solve the given problem) and above all the fact that some of the processes themselves could be defective (that is to say that it could have some kind of inconsistent behavior with the one foreseen by the algorithm).\\
+
+Generally, a distributed algorithm is presented (for example using a pseudocode) as a function of a single process $p_i$ of the network, which executes this algorithm. In this case, all other processes of the committee are supposed to perform the same copy of the algorithm.\\
+
+We will try to make a classification of the most important typical characteristics of a distributed algorithm. In the existing literature there are many lists of various properties of distributed systems, often called with different names.
+We will focus on the properties we considered essential to the work done discussed in this thesis.
+
+% TODO: fare una tabella alla fine del paragrafo sul consenso con un esempio di algoritmo distribuito (quello più facile di tutti del libro di Raynal) indicando gli aspetti evidenziati in questo paragrafo
+
+\begin{itemize}
+	\item Information is exchanged between the various processes via \textbf{message passing} (in which processes send and receive messages directly via special primitives) or through \textbf{shared memory} (in which processes share access to some data structure in which they can save and retrieve data).
+	
+	
+	In general, distributed algorithms that use primitives based on message passing are more common in the literature compared to those using shared memory.
+\end{itemize}
+
+
+%TODO: parlare del problema FLP
+
+
+
+%\section{Consensus Problem}
+%\section{Lattice Agreement}
+%\section{Interactive Consistency}
+%\section{Blockchain Fairness}
